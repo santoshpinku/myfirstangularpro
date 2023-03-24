@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class AppComponent {
+export class RegisterComponent {
   constructor(private router: Router) {}
   title = 'pro2';
-  loginForm = new FormGroup({
+  SignupForm = new FormGroup({
     name: new FormControl('', [ Validators.required ]),
     number: new FormControl('', [ Validators.required ]),
     email: new FormControl('', [ Validators.required ]),
@@ -18,19 +18,19 @@ export class AppComponent {
   });
 
   get FName() {
-    return this.loginForm.get('name');
+    return this.SignupForm.get('name');
   }
   get Num() {
-    return this.loginForm.get('number');
+    return this.SignupForm.get('number');
   }
   get Email() {
-    return this.loginForm.get('email');
+    return this.SignupForm.get('email');
   }
   get Password() {
-    return this.loginForm.get('pwd');
+    return this.SignupForm.get('pwd');
   }
   get Pswrepeat() {
-    return this.loginForm.get('pswrepeat');
+    return this.SignupForm.get('pswrepeat');
   }
   formSub(fdata : any) {
     console.log(fdata);
