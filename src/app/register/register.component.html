@@ -1,43 +1,56 @@
-<body>
-	<form action="action.php" [formGroup]="SignupForm" (ngSubmit)="formSub(SignupForm.value)">
-		<h1>Register Page</h1>
-    <p style="color:red;">Please fill in this form to create an account.</p>
-		<hr>
-		<label for="name"><b>Name</b></label>
-		<input type="text" placeholder="Enter Your Name" name="name" formControlName="name"><br>
-		<div *ngIf="FName && FName.invalid && FName.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Name</div>
-
-		<label for="number"><b>Contact No.</b></label>
-		<input type="text" placeholder="Enter Your Contact No." name="number" formControlName="number"><br>
-		<div *ngIf="Num && Num.invalid && Num.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Number</div>
-
-		<label for="email"><b>Email</b></label> 
-		<input type="text" placeholder="Enter Your E-mail" name="email" formControlName="email"><br>
-    <div *ngIf="Email && Email.invalid && Email.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Email Address</div>
-
-
-		<label for="pwd"><b>Password</b></label>
-		<input type="password" placeholder="Enter Your Password" name="pwd" formControlName="pwd"><br>
-    <div *ngIf="Password && Password.invalid && Password.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Password</div>
-
-
-		<label for="pswrepeat"><b>Repeat Password</b></label>
-		<input type="password" placeholder="Repeat Your Password" name="pswrepeat" formControlName="pswrepeat"><br>
-    <div *ngIf="Pswrepeat && Pswrepeat.invalid && Pswrepeat.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Repeat Password</div>
-
-
-		<hr>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="checkbox">By creating an account you agree to our <a href="www.4dalertsupport.com">Terms & Privacy</a>.</label><br>
-		
-
-		<button type="submit" class="registerbutton">Register</button>
-		
+<div class="container">
+	<div class="card">
+		<div class="card-body" style="background-color: rgb(23, 101, 169);width: 55rem; margin-left: 20rem;">
+			
+				<form action="action.php" [formGroup]="SignupForm" (ngSubmit)="formSub(SignupForm.value)">
+					<h1>Register Page</h1>
+				<p style="color:red;">Please fill in this form to create an account.</p>
+					<hr>
+					<label for="name"><b>Name</b></label>
+					<input type="text" placeholder="Enter Your Name" name="name" formControlName="name"><br>
+					<div *ngIf="FName && FName.invalid && FName.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Name</div>
+			
+					<label for="number"><b>Contact No.</b></label>
+					<input type="text" placeholder="Enter Your Contact No." name="number" formControlName="number"><br>
+					<div *ngIf="Num && Num.invalid && Num.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Number</div>
+			
+					<label for="email"><b>Email</b></label> 
+					<input type="text" placeholder="Enter Your E-mail" name="email" formControlName="email"><br>
+				<div *ngIf="Email && Email.invalid && Email.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Email Address</div>
+			
+			
+					<label for="pwd"><b>Password</b></label>
+					<input type="password" placeholder="Enter Your Password" name="pwd" formControlName="pwd"><br>
+				<div *ngIf="Password && Password.invalid && Password.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Password</div>
+			
+			
+					<label for="pswrepeat"><b>Repeat Password</b></label>
+					<input type="password" placeholder="Repeat Your Password" name="pswrepeat" formControlName="pswrepeat"><br>
+				<div *ngIf="Pswrepeat && Pswrepeat.invalid && Pswrepeat.touched" style="color: #e82626; font-size: small; font-family: cursive;">Plz Enter Your Repeat Password</div>
+			
+				Birthday: <br><input type="date" name="birthday" required><br><br>
   
-		
-		<p>Already have an account? <a routerLink="/login">Sign in</a>.</p>
-		
-	</form>
+				Gender:<br>
+				<input type="radio" name="gender" value="Male">Male
+				<input type="radio" name="gender" value="Female">Female
+				<input type="radio" name="gender" value="Other">Other<br><br>
 
-
-</body>
+					<hr>
+				<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+			  <label for="checkbox">By creating an account you agree to our <a href="www.4dalertsupport.com">Terms & Privacy</a>.</label><br>
+					
+			
+					<button type="submit" class="registerbutton">Register</button>
+					
+			  
+					
+					<p>Already have an account? <a routerLink="/login">Sign in</a>.</p>
+					
+				</form>
+			
+			
+			
+		</div>
+	  </div>
+	
+</div>
